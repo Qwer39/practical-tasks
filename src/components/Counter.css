@@ -1,0 +1,77 @@
+/* Counter.css - обновленные стили */
+.counter-component {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.counter-component h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.decrement-btn,
+.reset-btn,
+.increment-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.decrement-btn {
+  background: #ff6b6b;
+  color: white;
+}
+
+.decrement-btn:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+}
+
+.reset-btn {
+  background: #4ecdc4;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #3dbcb4;
+  transform: translateY(-2px);
+}
+
+.increment-btn {
+  background: #45b7d1;
+  color: white;
+}
+
+.increment-btn:hover {
+  background: #35a7c1;
+  transform: translateY(-2px);
+}
+
+.counter-component p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.counter-component strong {
+  color: #333;
+  font-size: 1.2em;
+}

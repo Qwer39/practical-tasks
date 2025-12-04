@@ -1,0 +1,216 @@
+.progress-chart {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-chart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2c3e50);
+}
+
+.chart-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  color: #6c757d;
+  font-size: 16px;
+  font-style: italic;
+  border: 2px dashed #dee2e6;
+}
+
+.chart-canvas {
+  width: 100%;
+  height: 400px;
+  background: white;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.chart-canvas:hover {
+  transform: scale(1.01);
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.legend-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для axis labels */
+.chart-axis-label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  fill: #6c757d;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+.chart-tooltip {
+  position: absolute;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.chart-tooltip::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.chart-bar {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.chart-bar:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.chart-grid-line {
+  stroke: #e9ecef;
+  stroke-width: 1;
+  stroke-dasharray: 4, 4;
+}
+
+/* Адаптивность для графика */
+@media (max-width: 768px) {
+  .progress-chart {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .chart-canvas {
+    height: 300px;
+  }
+  
+  .chart-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .legend-item {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-canvas {
+    height: 250px;
+  }
+  
+  .chart-placeholder {
+    padding: 40px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Анимации для графика */
+@keyframes barAnimation {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+.animated-bar {
+  transform-origin: bottom;
+  animation: barAnimation 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Стили для легенды при hover */
+.legend-item.highlighted {
+  background: #3498db;
+  color: white;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.legend-item.highlighted .legend-color {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Loading state для графика */
+.chart-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+}
+
+.chart-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

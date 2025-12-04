@@ -1,0 +1,117 @@
+/* Стили для темной темы */
+[data-theme="dark"] {
+  --bg-color: #1a1a2e;
+  --text-color: #e6e6e6;
+  --card-bg: #16213e;
+  --border-color: #0f3460;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .app {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .main-content {
+  background: var(--bg-color);
+}
+
+[data-theme="dark"] .page,
+[data-theme="dark"] .card,
+[data-theme="dark"] .settings-section,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .progress-section,
+[data-theme="dark"] .chart-section,
+[data-theme="dark"] .category-stats,
+[data-theme="dark"] .recommendations,
+[data-theme="dark"] .setting-item,
+[data-theme="dark"] .action-item,
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .action-card,
+[data-theme="dark"] .tech-item {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+[data-theme="dark"] .page-header h1,
+[data-theme="dark"] .stat-card h3,
+[data-theme="dark"] .progress-section h3,
+[data-theme="dark"] .chart-section h3,
+[data-theme="dark"] .category-stats h3,
+[data-theme="dark"] .recommendations h3,
+[data-theme="dark"] .settings-section h2,
+[data-theme="dark"] .feature-card h3,
+[data-theme="dark"] .tech-item h3 {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #0f3460, #1a1a2e);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .setting-item select,
+[data-theme="dark"] .setting-item input[type="text"],
+[data-theme="dark"] .setting-item input[type="password"],
+[data-theme="dark"] .login-form input {
+  background: #1a1a2e;
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .checkbox-label {
+  background: var(--border-color);
+}
+
+[data-theme="dark"] .empty-state {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .app-footer {
+  background: #0f3460;
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .app-footer a {
+  color: #4cc9f0;
+}
+
+[data-theme="dark"] .login-container {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .login-header h1 {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .login-hint {
+  background: var(--border-color);
+  border-color: #0f3460;
+}
+
+[data-theme="dark"] .login-hint code {
+  background: #1a1a2e;
+  color: var(--text-color);
+}
+
+/* Автотема */
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    --bg-color: #1a1a2e;
+    --text-color: #e6e6e6;
+    --card-bg: #16213e;
+    --border-color: #0f3460;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}

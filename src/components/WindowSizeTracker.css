@@ -1,0 +1,70 @@
+.window-size-tracker {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.window-size-tracker h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.size-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.size-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.screen-type {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.screen-type.мобильный {
+  background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+}
+
+.screen-type.планшет {
+  background: linear-gradient(45deg, #4ECDC4, #44A08D);
+}
+
+.screen-type.десктоп {
+  background: linear-gradient(45deg, #556270, #4ECDC4);
+}

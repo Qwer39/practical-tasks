@@ -1,0 +1,50 @@
+.color-picker {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-display {
+  width: 200px;
+  height: 100px;
+  margin: 10px 0;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.color-controls h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.color-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-buttons button {
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.color-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.color-buttons button.active {
+  border-color: #000;
+  transform: scale(1.1);
+}

@@ -1,0 +1,63 @@
+/* UserCard.css - исправленная версия */
+.user-card {
+  display: flex;
+  gap: 20px;
+  background: white; /* Белый фон карточки */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333; /* ← ВАЖНО: Цвет текста по умолчанию */
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-section {
+  text-align: center;
+}
+
+.avatar-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+}
+
+/* Стили для текста "Статус: online/offline" */
+.avatar-section p {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666; /* ← Серый цвет для статуса */
+}
+
+.user-info {
+  flex: 1; /* Занимает всё оставшееся пространство */
+}
+
+/* Стили для имени пользователя */
+.user-info h3 {
+  margin: 0 0 10px 0;
+  color: #333; /* ← Тёмный цвет для имени */
+  font-size: 1.5em;
+}
+
+/* Стили для роли пользователя */
+.user-info p {
+  margin: 0;
+  color: #666; /* ← Серый цвет для роли */
+  font-size: 1em;
+}
+
+/* Если статус онлайн - зелёный, офлайн - серый */
+.avatar-section p[data-status="online"] {
+  color: #4CAF50;
+}
+
+.avatar-section p[data-status="offline"] {
+  color: #9E9E9E;
+}

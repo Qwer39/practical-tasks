@@ -1,0 +1,155 @@
+.user-profile {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.8em;
+}
+
+/* Стили для состояния загрузки */
+.user-profile.loading {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.user-profile.loading p {
+  color: #666;
+  font-size: 1.1em;
+}
+
+/* Стили для состояния ошибки */
+.user-profile.error {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  color: white;
+}
+
+.error-icon {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.user-profile.error h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+.user-profile.error p {
+  margin: 0 0 20px 0;
+  opacity: 0.9;
+}
+
+.retry-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background: white;
+  color: #ff6b6b;
+}
+
+/* Стили для успешной загрузки */
+.user-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.user-main-info h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1.8em;
+}
+
+.username {
+  margin: 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.user-details {
+  padding: 25px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 1em;
+}
+
+.detail-value {
+  color: #333;
+  font-weight: 500;
+}
+
+.website-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.website-link:hover {
+  text-decoration: underline;
+}
